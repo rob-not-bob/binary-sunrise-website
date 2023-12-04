@@ -1,14 +1,24 @@
+<script lang="ts">
+  import { page } from '$app/stores';
+
+  const routes = [
+    ['Home', '/'],
+    ['Games', '/games'],
+    ['Blog', '/blog'],
+    ['About', '/about'],
+    ['Contact', '/contact'],
+  ]
+</script>
+
 <nav>
   <div class="container">
     <a href="/" class="logo">
       <span>Binary<span class="color">Sunrise</span></span>
     </a>
     <ul>
-      <li><a class="active" href="/">Home</a></li>
-      <li><a href="/games">Games</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
+      {#each routes as [name, route]}
+        <li><a class:active={$page.url.pathname === route} href="{route}">{name}</a></li>
+      {/each}
     </ul>
   </div>
 </nav>
