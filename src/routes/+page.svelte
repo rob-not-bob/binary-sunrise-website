@@ -12,22 +12,38 @@
   });
 </script>
 
-<div class="hero">
-  <Nav />
+<div class="bg-image" />
+<div class="hero" />
+<Nav />
 
-  <div class="container">
-    <div class="welcome-blurb fadeInUp">
-      <h2>Hello! Welcome to</h2>
-      <h1 style="font-size: {h1FontSize}px">Binary<span class="color">Sunrise</span></h1>
-      <p>An indie game company dedicated to game feel</p>
-    </div>
+<div class="container center-vertically">
+  <div class="welcome-blurb fadeInUp">
+    <h2>Hello! Welcome to</h2>
+    <h1 style="font-size: {h1FontSize}px">Binary<span class="color">Sunrise</span></h1>
+    <p>An indie game company dedicated to game feel</p>
   </div>
 </div>
 
 <style lang="scss">
+  .bg-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: url('$lib/images/bg3.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
   .hero {
-    animation-delay: 0.4s;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.93;
     min-height: 100vh;
+    max-height: 100vh;
+
     background:
       radial-gradient(circle farthest-corner at bottom left, hsl(38 100% 50% / 1) 0%, transparent 60%),
       radial-gradient(circle farthest-corner at bottom right, hsl(38 100% 50% / 1) 0%, transparent 60%),
@@ -40,8 +56,16 @@
     }
   }
 
+  .center-vertically {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+  }
+
   .welcome-blurb {
-    margin-top: 35%;
+    animation-delay: 0.4s;
     color: white;
 
     .color {
