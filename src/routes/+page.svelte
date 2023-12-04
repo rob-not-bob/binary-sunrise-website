@@ -18,8 +18,15 @@
   .hero {
     min-height: 100vh;
     background:
-      linear-gradient(212deg, hsl(274 100% 20% / 1) 10%, rgba(0, 0, 0, 0) 60%),
-      linear-gradient(212deg, hsl(274 100% 36% / 1) 40%, hsl(38 100% 50% / 1) 100%);
+      radial-gradient(circle farthest-corner at bottom left, hsl(38 100% 50% / 1) 0%, transparent 60%),
+      radial-gradient(circle farthest-corner at bottom right, hsl(38 100% 50% / 1) 0%, transparent 60%),
+      linear-gradient(0, hsl(274 100% 36% / 1) 0%, hsl(274 100% 20% / 1) 100%);
+    @media screen and (min-width: 2000px) {
+      background:
+        radial-gradient(circle farthest-corner at bottom left, hsl(38 100% 50% / 1) 0%, transparent 50%),
+        radial-gradient(circle farthest-corner at bottom right, hsl(38 100% 50% / 1) 0%, transparent 50%),
+        linear-gradient(0, hsl(274 100% 36% / 1) 0%, hsl(274 100% 20% / 1) 100%);
+    }
   }
 
   .welcome-blurb {
@@ -32,7 +39,7 @@
 
     h1 {
       font-weight: 700;
-      font-size: 9.2vw;
+      font-size: 164px;
       line-height: 1.2;
     }
 
