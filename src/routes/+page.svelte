@@ -16,7 +16,7 @@
   <Nav />
 
   <div class="container">
-    <div class="welcome-blurb">
+    <div class="welcome-blurb fadeInUp">
       <h2>Hello! Welcome to</h2>
       <h1 style="font-size: {h1FontSize}px">Binary<span class="color">Sunrise</span></h1>
       <p>An indie game company dedicated to game feel</p>
@@ -26,6 +26,7 @@
 
 <style lang="scss">
   .hero {
+    animation-delay: 0.4s;
     min-height: 100vh;
     background:
       radial-gradient(circle farthest-corner at bottom left, hsl(38 100% 50% / 1) 0%, transparent 60%),

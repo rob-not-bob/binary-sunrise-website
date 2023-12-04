@@ -26,3 +26,29 @@ ol, ul {
   min-width: 320px;
   margin: 0 auto;
 }
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 0.75s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40px);
+  }
+
+  50% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
