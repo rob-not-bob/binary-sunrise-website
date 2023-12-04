@@ -43,9 +43,14 @@
     font-size: 1.8rem;
     padding: 18px 20px;
     color: rgba(255, 255, 255, 0.8);
+    transition: 0.5s color ease-out;
 
-    &:active {
+    &.active {
       color: #FFFFFF;
+    }
+
+    &:hover {
+      color: #FEA303;
     }
   }
 </style>
