@@ -1,6 +1,6 @@
-import type { PageLoad } from "./$types";
-import { parse, format } from "date-fns";
-import { posts } from "./posts";
+import type { PageLoad } from './$types';
+import { parse, format } from 'date-fns';
+import { posts } from './posts';
 
 export const load = (async ({ params }) => {
   const post = await import(`./${params.post}/post.svx`);
@@ -26,10 +26,7 @@ export const load = (async ({ params }) => {
   return {
     component: post.default,
     ...post.metadata,
-    date: format(
-      parse(post.metadata.date, "MM-dd-yyyy", new Date()),
-      "MMMM do, yyyy"
-    ),
+    date: format(parse(post.metadata.date, 'MM-dd-yyyy', new Date()), 'MMMM do, yyyy'),
     heroImageUrl: imageUrl,
     description: postEntry?.description,
   };

@@ -7,7 +7,7 @@
     ['Blog', '/blog'],
     ['About', '/about'],
     ['Contact', '/contact'],
-  ]
+  ];
 </script>
 
 <nav>
@@ -17,7 +17,9 @@
     </a>
     <ul>
       {#each routes as [name, route] (name)}
-        <li><a class:active={$page.url.pathname === route} href="{route}">{name}</a></li>
+        <li>
+          <a class:active={$page.url.pathname === route} href={route}>{name}</a>
+        </li>
       {/each}
     </ul>
   </div>
@@ -32,14 +34,14 @@
   }
 
   .logo {
-    font-size: 26px;;
+    font-size: 26px;
     display: flex;
     color: white;
     font-weight: 900;
     flex: 1;
 
     .color {
-      color: #FEA303;
+      color: #fea303;
     }
   }
 
@@ -56,11 +58,11 @@
     transition: 0.5s color ease-out;
 
     &.active {
-      color: #FFFFFF;
+      color: #ffffff;
     }
 
     &:hover {
-      color: #FEA303;
+      color: #fea303;
     }
   }
 </style>

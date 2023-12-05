@@ -213,11 +213,7 @@
     line-height: inherit;
   }
 
-  :global(
-      .markdown-body [type='button'],
-      .markdown-body [type='reset'],
-      .markdown-body [type='submit']
-    ) {
+  :global(.markdown-body [type='button'], .markdown-body [type='reset'], .markdown-body [type='submit']) {
     -webkit-appearance: button;
   }
 
@@ -311,7 +307,14 @@
   :global(.markdown-body kbd) {
     display: inline-block;
     padding: 3px 5px;
-    font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font:
+      11px ui-monospace,
+      SFMono-Regular,
+      SF Mono,
+      Menlo,
+      Consolas,
+      Liberation Mono,
+      monospace;
     line-height: 10px;
     color: var(--color-fg-default);
     vertical-align: middle;
@@ -387,12 +390,7 @@
     list-style-type: lower-roman;
   }
 
-  :global(
-      .markdown-body ul ul ol,
-      .markdown-body ul ol ol,
-      .markdown-body ol ul ol,
-      .markdown-body ol ol ol
-    ) {
+  :global(.markdown-body ul ul ol, .markdown-body ul ol ol, .markdown-body ol ul ol, .markdown-body ol ol ol) {
     list-style-type: lower-alpha;
   }
 
@@ -401,14 +399,28 @@
   }
 
   :global(.markdown-body tt, .markdown-body code) {
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      SF Mono,
+      Menlo,
+      Consolas,
+      Liberation Mono,
+      monospace;
     font-size: 12px;
   }
 
   :global(.markdown-body pre) {
     margin-top: 0;
     margin-bottom: 0;
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font-family:
+      ui-monospace,
+      SFMono-Regular,
+      SF Mono,
+      Menlo,
+      Consolas,
+      Liberation Mono,
+      monospace;
     font-size: 12px;
     word-wrap: normal;
   }
@@ -425,10 +437,7 @@
     opacity: 1;
   }
 
-  :global(
-      .markdown-body input::-webkit-outer-spin-button,
-      .markdown-body input::-webkit-inner-spin-button
-    ) {
+  :global(.markdown-body input::-webkit-outer-spin-button, .markdown-body input::-webkit-inner-spin-button) {
     margin: 0;
     -webkit-appearance: none;
     appearance: none;
