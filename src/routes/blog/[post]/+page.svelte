@@ -14,7 +14,7 @@
     postUrl={$page.url.href}
   />
   <!-- <SocialMediaButtons url={$page.url.href} title={data.title} /> -->
-  <article class="container">
+  <article class="post-container">
     <div class="postMeta">
       <span class="postAuthor">{data.author}</span>
       <span class="postDate">{data.date}</span>
@@ -60,8 +60,8 @@
 
   .wrapper {
     max-width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 12px;
+    padding-left: 12px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 87px;
@@ -84,7 +84,7 @@
     }
   }
 
-  .container {
+  .post-container {
     max-width: 66.6666%;
     margin-left: auto;
     margin-right: auto;
