@@ -12,6 +12,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>Binary Sunrise</title>
+</svelte:head>
+
 <div class="bg-image" />
 <div class="hero" />
 <Nav />
@@ -40,7 +44,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    opacity: 0.93;
+    opacity: 0.90;
     min-height: 100vh;
     max-height: 100vh;
 

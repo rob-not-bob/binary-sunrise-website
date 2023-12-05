@@ -16,7 +16,7 @@
       <span>Binary<span class="color">Sunrise</span></span>
     </a>
     <ul>
-      {#each routes as [name, route]}
+      {#each routes as [name, route] (name)}
         <li><a class:active={$page.url.pathname === route} href="{route}">{name}</a></li>
       {/each}
     </ul>
