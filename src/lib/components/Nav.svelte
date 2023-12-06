@@ -41,7 +41,7 @@
     flex: 1;
 
     .color {
-      color: #fea303;
+      color: var(--accent);
     }
   }
 
@@ -58,11 +58,11 @@
     transition: 0.5s color ease-out;
 
     &.active {
-      color: #ffffff;
+      color: white;
     }
 
     &:hover {
-      color: #fea303;
+      color: var(--accent);
     }
   }
 </style>
