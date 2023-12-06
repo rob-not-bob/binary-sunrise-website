@@ -1,6 +1,5 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import EmailSignup from '$lib/components/EmailSignup.svelte';
   // import SocialMediaButtons from '$lib/components/SocialMediaButtons';
   import SocialMediaHead from './SocialMediaHead.svelte';
 

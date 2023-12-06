@@ -1,0 +1,46 @@
+<script lang="ts">
+  import type { SvelteComponent } from 'svelte';
+  import { Button, Facebook, Instagram, Twitter, Steam, Itch, TikTok, YouTube } from './SocialMediaIcons';
+
+  const socialMedia: [string, writeable<typeof SvelteComponent>][] = [
+    ['/', Facebook],
+    ['/', Instagram],
+    ['/', Twitter],
+    ['/', Steam],
+    ['/', Itch],
+    ['/', TikTok],
+    ['/', YouTube],
+  ];
+  const year = new Date().getFullYear();
+</script>
+
+<footer>
+  <div class="social-media">
+    {#each socialMedia as [href, icon]}
+      <Button {href} {icon} />
+    {/each}
+  </div>
+  <p class="copyright">Copyright © {year} | All Rights Reserved</p>
+</footer>
+
+<style lang="scss">
+  footer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #3b2848;
+    color: white;
+  }
+
+  .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+</style>

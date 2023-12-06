@@ -10,8 +10,8 @@
       target="_self"
       novalidate
     >
-      <div id="mc_embed_signup_scroll">
-        <h2>Subscribe to blog updates</h2>
+      <div id="mc_embed_signup_scroll" class="container">
+        <h2>Subscribe for updates</h2>
         <div class="mc-field-group">
           <input
             type="email"
@@ -56,7 +56,7 @@
 
 <style lang="scss">
   #mc_embed_shell {
-    background-color: #f8f9fa;
+    background-color: #ebe8ed;
     padding: 48px 12px;
   }
 
@@ -95,6 +95,7 @@
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.16rem;
+    transition: all 0.25s;
     cursor: pointer;
 
     &:hover {
