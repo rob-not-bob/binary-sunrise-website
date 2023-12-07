@@ -73,6 +73,7 @@
   .welcome-blurb {
     animation-delay: 0.4s;
     color: white;
+    z-index: -1;
 
     .color {
       color: #fea303;
