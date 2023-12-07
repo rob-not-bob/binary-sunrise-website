@@ -18,7 +18,9 @@
 
 <div class="bg-image" />
 <div class="hero" />
-<Nav />
+<div class="home-page-nav">
+  <Nav />
+</div>
 
 <div class="container center-vertically">
   <div class="welcome-blurb fadeInUp">
@@ -88,6 +90,12 @@
 
     p {
       font-size: 18px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .home-page-nav :global(.nav-bar) {
+      background-color: transparent !important;
     }
   }
 </style>

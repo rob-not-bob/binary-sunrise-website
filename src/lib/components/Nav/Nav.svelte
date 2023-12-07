@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Button, Hamburger, Close } from '$lib/components/Icons';
+  import { Hamburger, Close } from '$lib/components/Icons';
 
   const routes = [
     ['Home', '/'],
@@ -149,17 +149,23 @@
     }
   }
 
-  @keyframes navOpen {
-    0% {
-      opacity: 0;
-      translate-x: -9999px;
-    }
-    1% {
-      translate-x: 0;
+  @media screen and (min-width: 768px) {
+    .menu-toggle,
+    .spacer {
+      display: none;
     }
 
-    100% {
+    .nav-links {
+      position: static;
+      height: auto;
       opacity: 1;
+      pointer-events: auto;
+      background-color: transparent;
+    }
+
+    ul {
+      flex-direction: row;
+      background-color: transparent;
     }
   }
 
