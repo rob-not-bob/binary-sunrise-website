@@ -18,7 +18,9 @@
   <div class="container">
     <div class="social-media">
       {#each socialMedia as [href, icon]}
-        <Button {href} {icon} />
+        <Button {href}>
+          <svelte:component this={icon} />
+        </Button>
       {/each}
     </div>
     <p class="copyright">Copyright © {year} | All Rights Reserved</p>

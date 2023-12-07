@@ -1,12 +1,9 @@
 <script lang="ts">
-  import type { SvelteComponent } from 'svelte';
-
-  export let href: string;
-  export let icon: writeable<typeof SvelteComponent>;
+  export let href: string = '#';
 </script>
 
-<a {href}>
-  <svelte:component this={icon} />
+<a {href} on:click {...$$restProps}>
+  <slot />
 </a>
 
 <style lang="scss">

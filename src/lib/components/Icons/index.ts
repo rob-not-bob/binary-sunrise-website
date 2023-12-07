@@ -1,5 +1,7 @@
 export { default as Button } from './Button.svelte';
+export { default as Close } from './Close.svelte';
 export { default as Facebook } from './Facebook.svelte';
+export { default as Hamburger } from './Hamburger.svelte';
 export { default as Instagram } from './Instagram.svelte';
 export { default as Itch } from './Itch.svelte';
 export { default as Steam } from './Steam.svelte';
