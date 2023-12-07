@@ -1,8 +1,15 @@
-<div class="markdown-body">
+<div class="markdown-body container">
   <slot />
 </div>
 
 <style lang="scss">
+  :global(.markdown-body .caption) {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
   :global(.markdown-body) {
     color-scheme: light;
     --color-prettylights-syntax-comment: #6e7781;
@@ -154,11 +161,9 @@
     height: auto;
     max-height: 830px;
     max-width: 100%;
-    box-sizing: content-box;
     background-color: var(--color-canvas-default);
 
     border-radius: 4px;
-    display: block;
     margin-left: auto;
     margin-right: auto;
   }

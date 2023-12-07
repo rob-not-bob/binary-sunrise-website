@@ -6,23 +6,26 @@
   export let data;
 </script>
 
-<div class="wrapper">
-  <SocialMediaHead
-    title={data.title}
-    description={data.description}
-    heroImageUrl={data.heroImageUrl}
-    postUrl={$page.url.href}
-  />
+<SocialMediaHead
+  title={data.title}
+  description={data.description}
+  heroImageUrl={data.heroImageUrl}
+  postUrl={$page.url.href}
+/>
+
+<div class="container">
   <!-- <SocialMediaButtons url={$page.url.href} title={data.title} /> -->
-  <article class="post-container">
-    <div class="postMeta">
-      <span class="postAuthor">{data.author}</span>
-      <span class="postDate">{data.date}</span>
-      <h1 class="postTitle">{data.title}</h1>
-      <p class="lead">{data.description}</p>
-    </div>
-    <svelte:component this={data.component} />
-  </article>
+  <div class="row justify-content-center">
+    <article class="col-md-7">
+      <div class="postMeta">
+        <span class="postAuthor">{data.author}</span>
+        <span class="postDate">{data.date}</span>
+        <h1 class="postTitle">{data.title}</h1>
+        <p class="lead">{data.description}</p>
+      </div>
+      <svelte:component this={data.component} />
+    </article>
+  </div>
 </div>
 
 <style lang="scss">
@@ -59,9 +62,6 @@
   }
 
   .wrapper {
-    max-width: 100%;
-    padding-right: 12px;
-    padding-left: 12px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 87px;
@@ -84,13 +84,7 @@
     }
   }
 
-  .post-container {
-    max-width: 66.6666%;
-    margin-left: auto;
-    margin-right: auto;
+  article {
     margin-bottom: 150px;
-    @media (max-width: 768px) {
-      max-width: 100%;
-    }
   }
 </style>

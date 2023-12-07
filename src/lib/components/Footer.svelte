@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { SvelteComponent } from 'svelte';
-  import { Button, Facebook, Instagram, Twitter, Steam, Itch, TikTok, YouTube } from './SocialMediaIcons';
+  import { Button, Facebook, Instagram, Twitter, Steam, Itch, TikTok, YouTube } from './Icons';
 
   const socialMedia: [string, writeable<typeof SvelteComponent>][] = [
     ['/', Facebook],
@@ -15,12 +15,14 @@
 </script>
 
 <footer>
-  <div class="social-media">
-    {#each socialMedia as [href, icon]}
-      <Button {href} {icon} />
-    {/each}
+  <div class="container">
+    <div class="social-media">
+      {#each socialMedia as [href, icon]}
+        <Button {href} {icon} />
+      {/each}
+    </div>
+    <p class="copyright">Copyright © {year} | All Rights Reserved</p>
   </div>
-  <p class="copyright">Copyright © {year} | All Rights Reserved</p>
 </footer>
 
 <style lang="scss">

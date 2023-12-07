@@ -1,0 +1,21 @@
+html {
+  --xxlarge: 1400px;
+  --xlarge: 1200px;
+  --large: 99px;
+  --medium: 768px;
+  --small: 576px;
+}
+
+@mixin for-size($size) {
+  @if $size == small-up {
+    @media screen and (min-width: var(--small)) { @content; }
+  } @else if $size == medium-up {
+    @media screen and (min-width: var(--medium)) { @content; }
+  } @else if $size == large-up {
+    @media screen and (min-width: var(--large)) { @content; }
+  } @else if $size == xlarge-up {
+    @media screen and (min-width: var(--xlarge)) { @content; }
+  } @else if $size == xxlarge-up {
+    @media screen and (min-width: var(--xxlarge)) { @content; }
+  }
+}

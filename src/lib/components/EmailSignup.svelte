@@ -12,17 +12,19 @@
     >
       <div id="mc_embed_signup_scroll" class="container">
         <h2>Subscribe for updates</h2>
-        <div class="mc-field-group">
-          <input
-            type="email"
-            name="EMAIL"
-            class="required email"
-            id="mce-EMAIL"
-            placeholder="Enter your email"
-            required
-            value=""
-          /><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-          <div class="optionalParent">
+        <div class="mc-field-group row">
+          <div class="col-md-8">
+            <input
+              type="email"
+              name="EMAIL"
+              class="required email"
+              id="mce-EMAIL"
+              placeholder="Enter your email"
+              required
+              value=""
+            /><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+          </div>
+          <div class="optionalParent col-md-4">
             <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe" />
 
             <p style="margin: 0px auto;">
@@ -113,21 +115,5 @@
   .optionalParent p {
     position: absolute;
     left: -9999px;
-  }
-
-  @media screen and (min-width: 767px) {
-    .mc-field-group {
-      display: flex;
-    }
-
-    input[type='email'] {
-      flex: 2;
-      width: auto;
-      margin-right: 24px;
-    }
-
-    .optionalParent {
-      flex: 1;
-    }
   }
 </style>
