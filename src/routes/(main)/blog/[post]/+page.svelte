@@ -61,29 +61,6 @@
     font-weight: 300;
   }
 
-  .wrapper {
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 87px;
-    animation: fadeIn 0.3s ease-in;
-
-    @media (min-width: 576px) {
-      width: 540px;
-    }
-
-    @media (min-width: 768px) {
-      width: 720px;
-    }
-
-    @media (min-width: 999px) {
-      width: 960px;
-    }
-
-    @media (min-width: 1200px) {
-      width: 1140px;
-    }
-  }
-
   article {
     margin-bottom: 150px;
   }

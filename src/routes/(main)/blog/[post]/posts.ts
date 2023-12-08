@@ -6,7 +6,16 @@ export const posts = [
     title: 'Arriving In Amsterdam',
     author: 'Robert Allen',
     date: '09-26-2022',
-    heroImageUrl: '/blog/arriving_in_amsterdam/canals.jpeg',
+    heroImageUrl: import('./arriving_in_amsterdam/canals.jpeg'),
+    description:
+      "The first day of my travels. Bags have been packed, cats are with a friend, said my goodbyes -- I'm all set.",
+  },
+  {
+    href: '/blog/arriving_in_amsterdam',
+    title: 'Arriving In Amsterdam',
+    author: 'Robert Allen',
+    date: '09-26-2022',
+    heroImageUrl: import('./arriving_in_amsterdam/dark_horse.jpeg'),
     description:
       "The first day of my travels. Bags have been packed, cats are with a friend, said my goodbyes -- I'm all set.",
   },

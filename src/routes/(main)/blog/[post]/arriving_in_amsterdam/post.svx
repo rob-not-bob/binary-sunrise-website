@@ -1,0 +1,45 @@
+---
+title: Arriving In Amsterdam
+author: Robert Allen
+date: 09-26-2022
+heroImageUrl: ./canals.jpeg
+---
+
+<script>
+  import bags from './bags.jpeg';
+  import boulder_night_out from './boulder_night_out_with_friends.jpeg';
+  import canals from './canals.jpeg';
+  import dark_horse from './dark_horse.jpeg';
+  import pancakes_amsterdam from './pancakes_amsterdam.jpeg';
+  import pancakes_amsterdam_latte from './pancakes_amsterdam_latte.jpeg';
+</script>
+
+<div class="row">
+  <img class="col-md-6" alt="Group in Dark Horse" src="{dark_horse}" />
+  <img class="col-md-6" alt="Saying Goodbye In Boulder" src={boulder_night_out} />
+</div>
+<span class="caption">Goodbye Party in Boulder's Famous Darkhorse</span>
+
+The first day of my travels. Bags have been packed, cats are with a friend, said my goodbyes -- I'm all set. A 7-hour redeye flight to Iceland followed by a 3-hour flight to Amsterdam. An easy pass through customs and I've officially arrived. Amsterdam. The first stop on what is supposed to be a year-long journey around the world. It's a bustling city renowned for its beautiful canals and lively atmosphere. It's a cultural hub where 90+% of the residents there speak English and you can go just about anywhere in the city using public transit or by bike. In other words, it's the perfect first stop for an inexperienced traveler like myself. My name's Rob. I am a 27-year-old American and I'm planning on traveling the world for a year.
+
+Having never left the country before, I'm relying on the advice of friends and strangers on the internet to guide me. What's been made clear is that staying in hostels is the number one way to travel. Cost wise it's much more advantageous. One night in the private room of an Airbnb can cost as much as a week's stay in a hostel. Of course, you can find cheaper accommodations should you choose to stay in one place for an extended period but when traveling that's pretty much the opposite of your goals. You want to keep moving and have as many experiences as possible.
+
+<img src={bags} alt="All of my belongings for the foreseeable future" />
+<span class="caption">All of my belongings for the foreseeable future</span>
+
+The hostels also have another advantage unique to my situation. I am traveling alone and am not intending on making this a year-long exercise in isolation. The hostels force you whether you like it or not to meet your fellow travelers. While it's possible to still ignore everyone and keep to yourself you would need to work to do so. Most likely you'll be sharing a room with at least 5 other people, oftentimes many more. The only private space you have in that room is your bed and depending on the hostel the "private" part is debatable given how easy it is for everyone in the room to see what you're doing. Other than your bed most hostels will have some kind of common area for people to mingle and socialize. If you're in your hostel and you're not sleeping, shitting, or showering then this is where you'll be
+
+Before that though. I spent a few nights in a private room. Just to give me some peace and time to adjust to the new environment. I also started working through the 8 hours of jet lag I had accumulated. On my first day in Amsterdam, it made it clear that I was missing a few things. Primarily an umbrella. It rained my entire first day in Amsterdam and I was unfortunate enough to have to be out in it for 30+ minutes to walk to my room with my (non-waterproof) luggage.
+
+<div class="row">
+  <img alt="Dutch Pancake" class="col-md-6" src="{pancakes_amsterdam}" />
+  <img alt="Cup of Coffee" class="col-md-6" src="{pancakes_amsterdam_latte}" />
+</div>
+<span class="caption">Pancakes Amsterdam - First Meal</span>
+
+Those first few days in the private room were relatively uneventful. I spent some time exploring the city. Enjoyed some pancakes at a place called Pancakes Amsterdam near Central station. Bought a gym membership for the month I'm here from a very gorgeous girl named Katya. I also picked up a GVB card from Central station. This was a card that could be loaded up with money and canned for all the trams, trains, and other forms of public transit around the Netherlands. Very handy and much better than buying tickets individually each time.
+
+Culturally I noticed a few differences between Amsterdam and the US. The very first is the lack of free drinking water in many places. Water is not served automatically like it is in the US. If you ask for water you need to be specific and ask for tap water or else they will assume you mean bottled water. Even then many places will refuse to serve tap water. I've only seen a single water fountain since my arrival here as well. Even then that one made quite a big deal about the "free" water they were providing. This was starting to stir up the red-blooded American within me and our superior hydration. However, this was quickly tempered when I got my first bill. I paid with my card and then... nothing. No tipping, the transaction was over. Quite a surprise from the normal 20% seen in America. I suppose I could live with the lack of water if it meant I could spend what would normally be my tip on a drink.
+
+<img src={canals} alt="The First of Many Canals" />
+<span class="caption">The First of Many Canals</span>

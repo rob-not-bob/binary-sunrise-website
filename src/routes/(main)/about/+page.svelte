@@ -2,6 +2,10 @@
   import header from './header1.jpg';
 </script>
 
+<svelte:head>
+  <title>About - Binary Sunrise</title>
+</svelte:head>
+
 <div class="container about">
   <div class="row">
     <img class="profile col-sm-8 col-md-4" alt="Me" src={header} />
