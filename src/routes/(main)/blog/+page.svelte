@@ -27,4 +27,16 @@
   .blog-posts {
     min-height: 60vh;
   }
+
+  .row {
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .row {
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 </style>

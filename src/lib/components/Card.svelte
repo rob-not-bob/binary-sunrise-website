@@ -6,16 +6,16 @@
   export let authorName: string;
   export let date: string;
 
-  const MAX_DESCRIPTION_LENGTH = 130;
+  const MAX_DESCRIPTION_LENGTH = 200;
 </script>
 
-<div class="card">
-  <div class="hero-image-wrap">
+<div class="card row">
+  <div class="hero-image-wrap col-lg-5">
     <a href={postHref}>
       <img class="hero-image" src={backgroundImage} alt={title} />
     </a>
   </div>
-  <div class="cardBlock">
+  <div class="content col-lg-7">
     <h2 class="title">
       <a href={postHref}>{title}</a>
     </h2>
@@ -33,8 +33,6 @@
 <style lang="scss">
   .card {
     margin-bottom: 48px;
-    display: flex;
-    flex-direction: column;
   }
 
   .hero-image {
@@ -46,7 +44,7 @@
     margin-bottom: 24px;
   }
 
-  .cardBlock {
+  .content {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -82,5 +80,29 @@
   .date {
     color: #888;
     font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: 996px) {
+    .card {
+      margin-bottom: 32px;
+    }
+
+    .hero-image-wrap {
+      display: flex;
+      align-items: center;
+      margin-right: 24px;
+    }
+
+    .hero-image {
+      margin-bottom: 0;
+    }
+
+    .content {
+      justify-content: center;
+    }
+
+    .title {
+      font-size: 4rem;
+    }
   }
 </style>
