@@ -27,8 +27,8 @@
     margin-bottom: 1.6rem;
   }
 
-  :global(ul),
-  :global(ol) {
+  .privacy-policy :global(ul),
+  .privacy-policy :global(ol) {
     padding-inline-start: 2rem;
     margin-bottom: 1rem;
   }

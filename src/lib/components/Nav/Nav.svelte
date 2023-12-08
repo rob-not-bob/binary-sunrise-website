@@ -7,7 +7,6 @@
     ['Games', '/games'],
     ['Blog', '/blog'],
     ['About', '/about'],
-    ['Contact', '/contact'],
   ];
 
   let isMenuExpanded = false;
@@ -85,6 +84,10 @@
     .color {
       color: var(--accent);
     }
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   $menu-size: 28px;
@@ -146,6 +149,7 @@
 
     &:hover {
       color: var(--accent);
+      text-decoration: none;
     }
   }
 

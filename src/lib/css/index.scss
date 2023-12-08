@@ -17,6 +17,11 @@ body {
 
 a {
   text-decoration: none;
+  color: #990f6b;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 ol,
