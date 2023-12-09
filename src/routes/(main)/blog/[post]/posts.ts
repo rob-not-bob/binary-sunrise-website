@@ -12,7 +12,7 @@ export const posts = [
   },
   {
     href: '/blog/arriving_in_amsterdam',
-    title: 'Arriving In Amsterdam',
+    title: 'Arriving In Amsterdam 2',
     author: 'Robert Allen',
     date: '09-26-2022',
     heroImageUrl: import('./arriving_in_amsterdam/dark_horse.jpeg'),

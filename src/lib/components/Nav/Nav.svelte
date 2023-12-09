@@ -5,7 +5,7 @@
   const routes = [
     ['Home', '/'],
     ['Games', '/games'],
-    ['Blog', '/blog'],
+    // ['Blog', '/blog'],
     ['About', '/about'],
   ];
 
