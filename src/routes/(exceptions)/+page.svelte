@@ -1,5 +1,6 @@
 <script>
   import { Nav } from '$lib/components';
+  import Logo from '$lib/components/logo.svelte';
   import { onMount } from 'svelte';
 
   let h1FontSize = 163;
@@ -24,6 +25,9 @@
 
 <div class="container center-vertically">
   <div class="welcome-blurb fadeInUp">
+    <div style="display: flex; align-items: center; justify-content: center; flex-direction: row;">
+      <Logo size="480px" />
+    </div>
     <h2>Hello! Welcome to</h2>
     <h1 style="font-size: {h1FontSize}px">
       Binary<span class="color">Sunrise</span>

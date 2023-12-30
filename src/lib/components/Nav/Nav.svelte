@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { Hamburger, Close } from '$lib/components/Icons';
+  import Logo from '$lib/components/logo.svelte';
 
   const routes = [
     ['Home', '/'],
@@ -34,6 +35,7 @@
         <svelte:component this={icon} color="white" />
       </button>
       <a href="/" class="logo">
+        <Logo size="65px" />
         <span>Binary<span class="color">Sunrise</span></span>
       </a>
       <div class="spacer" />
@@ -76,13 +78,19 @@
   }
 
   .logo {
+    display: flex;
+    align-items: center;
     font-size: 26px;
+    font-weight: 300;
     display: flex;
     color: white;
-    font-weight: 900;
+    :global(svg) {
+      margin-right: 10px;
+    }
 
     .color {
       color: var(--accent);
+      font-weight: 700;
     }
 
     &:hover {
