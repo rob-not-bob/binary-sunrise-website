@@ -112,7 +112,6 @@
     margin-top: 20px;
     padding-left: 0;
     padding-right: 0;
-    min-height: 15vh;
   }
 
   .screenshots {
@@ -133,6 +132,6 @@
   }
 
   article {
-    margin-bottom: 150px;
+    margin-bottom: 50px;
   }
 </style>

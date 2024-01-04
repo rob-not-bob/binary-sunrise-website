@@ -28,11 +28,15 @@
     <div style="display: flex; align-items: center; justify-content: center; flex-direction: row;">
       <Logo size="480px" />
     </div>
-    <h2>Hello! Welcome to</h2>
-    <h1 style="font-size: {h1FontSize}px">
-      Binary<span class="color">Sunrise</span>
-    </h1>
-    <p>An indie game company dedicated to game feel</p>
+    <div class="center-text">
+      <div class="welcome-text">
+        <h2>Hello! Welcome to</h2>
+        <h1 style="font-size: {h1FontSize}px">
+          Binary<span class="color">Sunrise</span>
+        </h1>
+        <p>An indie game company dedicated to game feel</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -67,7 +71,7 @@
   }
 
   .center-vertically {
-    flex: 0.9;
+    flex: 0.8;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,11 +85,13 @@
 
     .color {
       color: #fea303;
+      font-weight: 700;
     }
 
     h1 {
-      font-weight: 700;
+      font-weight: 500;
       line-height: 1.2;
+      margin-bottom: 8px;
     }
 
     h2 {
@@ -95,6 +101,22 @@
 
     p {
       font-size: 18px;
+    }
+  }
+
+  .center-text {
+    display: flex;
+    justify-content: center;
+  }
+
+  .welcome-text {
+    display: flex;
+    flex-direction: column;
+
+    h1,
+    h2,
+    p {
+      display: inline-block;
     }
   }
 
