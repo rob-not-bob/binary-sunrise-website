@@ -3,10 +3,8 @@
   import SocialMediaHead from './SocialMediaHead.svelte';
   import GameMeta from '$lib/components/GameMeta';
 
-  import image1 from './lock_breaker/phone_1.png';
-  import image2 from './lock_breaker/phone_2.png';
-  import image3 from './lock_breaker/phone_3.png';
-  import image4 from './lock_breaker/phone_4.png';
+  const screenshots = Object.values(import.meta.glob('./lock_breaker/screenshot_*.png', { as: 'url', eager: true }));
+
   export let data;
 </script>
 
@@ -33,18 +31,11 @@
       </div>
       <h2>Screenshots</h2>
       <div class="screenshots">
-        <div class="screenshot col-sm-3">
-          <img src={image1} alt="Lock Breaker Screenshot" />
-        </div>
-        <div class="screenshot col-sm-3">
-          <img src={image2} alt="Lock Breaker Screenshot" />
-        </div>
-        <div class="screenshot col-sm-3">
-          <img src={image3} alt="Lock Breaker Screenshot" />
-        </div>
-        <div class="screenshot col-sm-3">
-          <img src={image4} alt="Lock Breaker Screenshot" />
-        </div>
+        {#each screenshots as src (src)}
+          <div class="screenshot col-sm-3">
+            <img {src} alt="Lock Breaker Screenshot" />
+          </div>
+        {/each}
       </div>
       <div class="description">
         <svelte:component this={data.component} />

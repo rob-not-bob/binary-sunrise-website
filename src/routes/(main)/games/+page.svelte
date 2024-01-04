@@ -9,34 +9,25 @@
 </svelte:head>
 
 <div class="blog-posts container">
-  <div class="row">
-    {#each data.gameListings as game (game.title)}
-      <Card
-        backgroundImage={game.heroImageUrl}
-        title={game.title}
-        description={game.description}
-        date={game.date}
-        postHref={game.href}
-        authorName={game.author}
-      />
-    {/each}
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      {#each data.gameListings as game (game.title)}
+        <Card
+          backgroundImage={game.heroImageUrl}
+          title={game.title}
+          description={game.description}
+          date={game.date}
+          postHref={game.href}
+          authorName={game.author}
+        />
+      {/each}
+    </div>
   </div>
 </div>
 
 <style lang="scss">
   .blog-posts {
     min-height: 60vh;
-  }
-
-  .row {
-    margin-top: 30px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    .row {
-      max-width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    margin-top: 32px;
   }
 </style>

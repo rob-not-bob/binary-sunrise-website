@@ -10,12 +10,12 @@
 </script>
 
 <div class="card row">
-  <div class="hero-image-wrap col-lg-5">
+  <div class="hero-image-wrap col-lg-4">
     <a href={postHref}>
       <img class="hero-image" src={backgroundImage} alt={title} />
     </a>
   </div>
-  <div class="content col-lg-7">
+  <div class="content col-lg-8">
     <h2 class="title">
       <a href={postHref}>{title}</a>
     </h2>
@@ -40,7 +40,7 @@
     width: 100%;
     object-position: 38% 22%;
     object-fit: cover;
-    border-radius: 7px;
+    border-radius: 50px;
     margin-bottom: 24px;
   }
 

@@ -3,13 +3,13 @@
   import { Button, Facebook, Instagram, Twitter, Steam, Itch, TikTok, YouTube } from './Icons';
 
   const socialMedia: [string, writeable<typeof SvelteComponent>][] = [
-    ['/', Facebook],
-    ['/', Instagram],
-    ['/', Twitter],
-    ['/', Steam],
-    ['/', Itch],
-    ['/', TikTok],
-    ['/', YouTube],
+    // ['/', Facebook],
+    // ['/', Instagram],
+    ['https://twitter.com/BinarySunrise_', Twitter],
+    // ['/', Steam],
+    // ['/', Itch],
+    ['https://www.tiktok.com/@binary_sunrise', TikTok],
+    // ['/', YouTube],
   ];
   const year = new Date().getFullYear();
 </script>

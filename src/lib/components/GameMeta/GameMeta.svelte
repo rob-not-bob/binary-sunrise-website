@@ -1,7 +1,7 @@
 <script lang="ts">
-  export let googlePlayLink: string;
-  export let appleAppStoreLink: string;
-  export let privacyPolicyLink: string;
+  export let googlePlayLink: string | undefined = undefined;
+  export let appleAppStoreLink: string | undefined = undefined;
+  export let privacyPolicyLink: string | undefined = undefined;
 
   import googlePlayBadge from './google-play-app-badge.png';
   import appleAppBadge from './apple-app-badge.png';

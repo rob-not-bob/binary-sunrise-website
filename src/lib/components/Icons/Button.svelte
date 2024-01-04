@@ -20,10 +20,14 @@
     background-color: #ebe8ed;
     transition: all 0.25s ease-out;
 
+    & :global(svg) {
+      outline: 0;
+    }
+
     &:hover {
       background-color: var(--accent);
       & :global(svg) {
-        color: white;
+        fill: white;
       }
     }
   }
