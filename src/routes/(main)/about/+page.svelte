@@ -1,5 +1,5 @@
 <script lang="ts">
-  import header from './header1.jpg';
+  import header from './selfie.jpg';
 </script>
 
 <svelte:head>
