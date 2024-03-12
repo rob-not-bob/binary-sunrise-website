@@ -1,0 +1,73 @@
+---
+title: "Starting to Prototype: Creating an Ori-like platformer"
+author: Robert Allen
+date: 03-11-2024
+heroImageUrl: ./bash_in_action.png
+---
+
+<script>
+  import too_many_particles from './too_many_particles.png';
+  import bash_in_action from './bash_in_action.png';
+  import credits from './credits.png';
+  import flag_celebration from './flag_celebration.png';
+  import secret_snowman from './secret_snowman.png';
+  import pre_bash from './pre_bash.png';
+  import few_frames_after_bash from './few_frames_after_bash.png';
+</script>
+
+I’m Rob. I’m 28 years old and previously worked as a software engineer. My focus was on web and app development and I worked on aspects of the project. From frontend to backend, to CI/CD. I served as the team dev lead before I was laid off in November 2023. Since getting laid off, I decided to take the leap and have a go being a game developer. I was already considering doing it before my job laid me off so that just served as the catalyst.
+
+I’m just starting my journey into making games. So why should you care? What interest does this dev log hold for you? Well, that’s up to you to decide but I can tell you that you’ll get the perspective of an experienced (web) programmer on game development. Everything else, art, marketing, etc. I will be learning as a beginner and getting help from others where I can. I’ll try and share any useful tips, and tricks, I come across as well as try to reflect honestly on my mistakes.
+
+
+<img alt="Level Celebration" src="{flag_celebration}" />
+<span class="caption">Level celebration</span>
+
+I decided that the best thing I could do was to work on some projects and polish my skills as a game developer before diving into any long-term project. This resulted in a few projects like <a href="/games/lock_breaker" target="_blank">Lock Breaker</a>, <a href="https://binarysunrise.itch.io/dice-guantlet" target="_blank">Dice Gauntlet</a>, and other much less polished projects.
+
+I’ve now reached the point where I feel it’s time to begin working on a longer project. Something still somewhat short at say 3 - 5 months. Fortunately, as I was starting this process, Jonas Tyroller released <a href="https://www.youtube.com/watch?v=o5K0uqhxgsE" target="_blank">a video</a> on how to find a project to work on. It’s an excellent video on conducting a search algorithm for the right game you feel you can make. So I’ve started on a journey of attempting to make a prototype a week of different ideas I have to pin down a proper idea.
+
+## The real start of the dev log
+
+This week’s idea was for an Ori-inspired platformer that expands upon the bash mechanic.
+
+<img alt="Bash In Action" src="{bash_in_action}" />
+<span class="caption">The bash effect in action</span>
+
+I first worked on simply creating a normal 2D platformer. I added wall jumps, and double jumps and got the movement acceptable. I implemented things like jump buffering, and coyote time to make things feel decent. I then added some other things such as air friction and air acceleration to try and imitate the air movement present in Ori.
+
+Doing this taught me a lot of things that seem obvious in hindsight but you don’t realize until you try and implement them. For instance, Ori never moves faster on the X-axis in the air than when on the ground (except for dashes and bashes in the like). Similarly not pressing any input adds a lot of air friction to Ori so they slow they stop moving horizontally quite quickly.
+
+I then worked on the bullet redirection mechanic, referred to as Bash in the game.
+
+<div class="row">
+  <img class="col-md-6" alt="Ori Pre Bash" src="{pre_bash}" />
+  <img class="col-md-6" alt="Ori Post Bash" src="{few_frames_after_bash}" />
+</div>
+<span class="caption">A few frames before and after the bash takes place</span>
+
+Bash is interesting because it's actually easy to build despite its flashiness. The actual mechanic has very little to it. Keep track of what bullets/enemies are within range and prioritize the closest one. Freeze time to allow the player to aim their character. Teleport the character just in front of the bullet they bashed off of. Then finally, just add a burst of velocity to the player and bullet in opposite directions.
+
+Godot provides an easy way to pause time with Engine.time_scale. I just needed an Area2D node around the player that kept track of what bullets entered the player's bashable area and then prioritized the closest bullet. Pausing time doesn't stop `_process` and `_physics_process` from running. It just set's delta to 0. So for drawing the arrow, it's still easy to draw it even with time stopped in the engine.
+
+This is my first time making a prototype and honestly, I got lost in making a game instead of a prototype. I created tutorial levels to introduce each mechanic and spent a lot of time decorating each level. Spent time on jump sound effects, and particle effects when you hit the goal. I worked on a lot of stuff that’s not necessary for a simple prototype. Much of this work will go down the drain even if I continue the project since I want to redo the art.
+
+<img alt="Too Many Particles" src="{too_many_particles}" />
+<span class="caption">Level celebration taken to the max</span>
+
+At the same time, I’m not sure if it was a bad move to spend time making the game look okay. While it is not the fastest way to make a prototype, I’m working to develop an audience on Twitter. A large part of that means making visually engaging content.
+
+Overall, I struggled with prototyping. I spent a lot of time trying to make a fun game rather than focusing on bash as a mechanic. Simulatanously I didn’t do certain work that would have made the game more interesting because it was just a prototype. So I don’t feel I made a fun game or did a good job prototyping the mechanic. I do feel that I implemented bash correctly however I really should have spent that time on more applications of bash.
+
+<img alt="Secret Snowman" src="{secret_snowman}" />
+<span class="caption">I put some secret (and not so secret) snowman into each level</span>
+
+Let me know what you think. You can play the game for free on Itch at TODO. The music was made by a friend of mine who's a producer. Check them out at  TODO!
+
+With that said, for now, I’m moving on. I’ll take these lessons and move on to the next game idea. If those ideas don’t prove fruitful, I’ll come back and try to expand on other ideas I had on how to make a game centered around a bash-like mechanic.
+
+<img alt="End Game" src="{credits}" />
+<span class="caption">Victory Screen</span>
+
+I'll try to make these dev logs as much as I’m able. Ideally, once a week. The polish on these will be pretty low as I want to prioritize quantity over quality. If you have any feedback, please let me know via <a href="https://twitter.com/BinarySunrise_" target="_blank">Twitter</a>!
+k

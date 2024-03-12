@@ -7,9 +7,9 @@
     // ['/', Instagram],
     ['https://twitter.com/BinarySunrise_', Twitter],
     // ['/', Steam],
-    // ['/', Itch],
+    ['https://binarysunrise.itch.io/', Itch],
     ['https://www.tiktok.com/@binary_sunrise', TikTok],
-    // ['/', YouTube],
+    ['https://www.youtube.com/@BinarySunrise_', YouTube],
   ];
   const year = new Date().getFullYear();
 </script>

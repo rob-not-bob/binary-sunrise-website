@@ -51,8 +51,8 @@
     --color-border-blockquote: #00ab6d;
     --color-border-muted: hsla(210, 18%, 87%, 1);
     --color-neutral-muted: rgba(175, 184, 193, 0.2);
-    --color-accent-fg: #00ab6b;
-    --color-accent-emphasis: #00ab6b;
+    --color-accent-fg: #990f6b;
+    --color-accent-emphasis: #990f6b;
     --color-attention-subtle: #fff8c5;
     --color-danger-fg: #cf222e;
     -ms-text-size-adjust: 100%;

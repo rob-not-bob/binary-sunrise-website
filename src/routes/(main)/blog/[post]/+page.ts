@@ -19,6 +19,7 @@ export const load = (async ({ params }) => {
   // NOTE: Workaround to issue with dynamic imports and paths with () in them
   const modules = import.meta.glob(`./**/post.svx`);
   const post = (await modules[`./${params.post}/post.svx`]()) as Post;
+  // throw new Error(`post: ${JSON.stringify(modules)}, ${JSON.stringify(post)} ${post.metadata}, ${post.metadata}`)
   // const post = await import(`./${params.post}/post.svx`);
 
   const postEntry = posts.find(({ href }) => href === `/blog/${params.post}`);
