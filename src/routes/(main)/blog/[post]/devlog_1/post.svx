@@ -70,4 +70,4 @@ With that said, for now, I’m moving on. I’ll take these lessons and move on 
 <span class="caption">Victory Screen</span>
 
 I'll try to make these dev logs as much as I’m able. Ideally, once a week. The polish on these will be pretty low as I want to prioritize quantity over quality. If you have any feedback, please let me know via <a href="https://twitter.com/BinarySunrise_" target="_blank">Twitter</a>!
-k
+
