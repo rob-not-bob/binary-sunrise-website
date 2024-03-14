@@ -62,7 +62,7 @@ Overall, I struggled with prototyping. I spent a lot of time trying to make a fu
 <img alt="Secret Snowman" src="{secret_snowman}" />
 <span class="caption">I put some secret (and not so secret) snowman into each level</span>
 
-Let me know what you think. You can play the game for free on Itch at TODO. The music was made by a friend of mine who's a producer. Check them out at  TODO!
+Let me know what you think. <a target="_blank" href="https://binarysunrise.itch.io/bash">Play the game for free on Itch</a>. The music was made by a friend of mine who's a producer, Delta V. Check them out on <a target="_blank" href="https://soundcloud.com/delta_v_music">SoundCloud</a>!
 
 With that said, for now, I’m moving on. I’ll take these lessons and move on to the next game idea. If those ideas don’t prove fruitful, I’ll come back and try to expand on other ideas I had on how to make a game centered around a bash-like mechanic.
 
