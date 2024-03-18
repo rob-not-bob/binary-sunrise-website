@@ -8,6 +8,7 @@
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    color: #858585;
   }
 
   :global(.markdown-body) {
