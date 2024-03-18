@@ -1,5 +1,5 @@
 ---
-title: "Smithy"
+title: "Dev Log March 10th - 16th: Smithy"
 author: Robert Allen
 date: 03-17-2024
 heroImageUrl: ./ghost_effect_in_tree.png
