@@ -42,7 +42,7 @@
     --color-prettylights-syntax-brackethighlighter-angle: #57606a;
     --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
     --color-prettylights-syntax-constant-other-reference-link: #0a3069;
-    --color-fg-default: #888;
+    --color-fg-default: #525252;
     --color-fg-muted: rgba(0, 0, 0, 0.5);
     --color-fg-subtle: #6e7781;
     --color-canvas-default: #ffffff;
