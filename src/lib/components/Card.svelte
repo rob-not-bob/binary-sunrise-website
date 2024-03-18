@@ -40,7 +40,7 @@
     width: 100%;
     object-position: 38% 22%;
     object-fit: cover;
-    border-radius: 50px;
+    border-radius: 3px;
     margin-bottom: 24px;
   }
 

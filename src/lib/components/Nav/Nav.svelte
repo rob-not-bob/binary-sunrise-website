@@ -63,6 +63,7 @@
     background-color: $nav-color;
     position: fixed;
     inset: 0 0 auto 0;
+    z-index: 1;
   }
 
   .nav-bar-spacer {

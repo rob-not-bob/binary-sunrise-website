@@ -1,0 +1,115 @@
+---
+title: "Smithy"
+author: Robert Allen
+date: 03-17-2024
+heroImageUrl: ./ghost_effect_in_tree.png
+---
+
+<script>
+  import ghost_effect_in_tree from './ghost_effect_in_tree.png';
+  import ghost_effect_options from './ghost_effect_options.png';
+  import ghost_effect from './ghost_effect.mp4';
+  import ghost_trail_bugs from './ghost_trail_bugs.mp4';
+  import hover_effects from './hover_effects.mp4';
+  import menu_transition from './menu_transition.mp4';
+  import pause_unpause from './pause_unpause.mp4';
+  import smithy from './smithy.mp4';
+</script>
+
+This week, I did some traveling leaving me with less time to work on things.
+
+## Dash effect
+
+While traveling, I made a dash effect for when the player does a bullet redirect. It came out looking well, even if there were a few strange bugs!
+
+<video controls>
+  <source src={ghost_trail_bugs} type="video/mp4" />
+  <track kind="captions">
+</video>
+<span class="caption">Just some minor issues</span>
+
+The effect is quite flexible. I can drag and drop it onto any `AnimationPlayer` node and it will work out of the box! It just needs to be set to active, which can be done in the editor or in code.
+
+<img src={ghost_effect_in_tree} alt="" />
+<p></p> 
+<img src={ghost_effect_options} alt="" />
+<span class="caption">Options effect</span>
+
+It can be customized quite a bit to fit the needs of the project. Hopefully, I can reuse this in other projects.
+
+I'm supposed to be done with the Bash project, but I've found it is a good playground to create some tools and effects.
+
+<video controls>
+  <source src={ghost_effect} type="video/mp4" />
+  <track kind="captions">
+</video>
+<span class="caption">Final effect</span>
+
+## Updating my prototype template
+
+Before starting the next prototype, I migrated some things from  Bash into my template. I keep a private template repository with a basic functionality set up. That way I don't have to build it all from scratch for each prototype.
+
+It contains a few things like placeholders for a main menu, a pause menu, and a general skeleton for the game projects.
+
+### Pause / Resume sound effects
+
+I took the pause / resume sound effects from last week's prototype and moved them to the template. 
+
+<video controls>
+  <source src={pause_unpause} type="video/mp4" />
+  <track kind="captions">
+</video>
+
+I also fixed an issue I was having with my menu effects. I have some cool hover effects that are supposed to animate when you hover over a button that worked in the editor but not in the game. 
+
+The issue came from a misunderstanding about how to implement pausing in Godot. I was setting `Engine.time_scale` to `0` to cause the game to freeze. However, the side effect was that the Tweens controlling my button animations no longer worked since they too were frozen. 
+
+Turns out Godot has a much better solution for pausing. I should have googled how to pause before creating my own solution.
+
+A simple call of `get_tree().pause = true` is all it takes. Apparently, all `Node`'s have a `process_mode` attribute that you can manipulate to control that node's processing behavior.
+
+For my use case, setting `process_mode = Node.PROCESS_MODE_ALWAYS` in my menus makes it so all my effects and Tweens still run as expected! Even while the rest of the game is frozen.
+
+<video controls>
+  <source src={hover_effects} type="video/mp4" />
+  <track kind="captions">
+</video>
+<span class="caption">Button hover effects in action</span>
+
+Check out <a target="blank" href="https://docs.godotengine.org/en/stable/tutorials/scripting/pausing_games.html">Godot's docs on pausing</a> if you're curious:
+
+### Hooked up menu transitions
+
+Fellow game dev <a href="https://twitter.com/firebelley" target="_blank">@firebelly</a> created a great godot script for animating transitions between different scenes. I forgot to hook it up for my main menu in the template so fixed that.
+
+<video controls>
+  <source src={menu_transition} type="video/mp4" />
+  <track kind="captions">
+</video>
+<span class="caption"></span>
+
+I still need some button click sound effects in there. It feels quite awkward to not have a sound when you click.
+
+## Start of next prototype: Smithy
+
+For my next prototype, I thought it'd be cool to make a game about being a blacksmith. The main idea is you'd forge weapons and sell them in your shop. The main mechanic would revolve around shaping a piece of steel into the shape of your weapon. Just like a real blacksmith! The better job you do the more you can sell it for.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fCPN1Oslyw0?si=M-ysny9nKiRrPl8V&amp;start=377" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<span class="caption">Inspiration</span>
+
+I thought this might be tricky but had an idea to implement it. However, after struggling for a few days on it, I couldn't implement it how I wanted. 
+
+I stepped back and focused on just getting something simple together to showcase the idea and get something working.
+
+<video controls muted>
+  <source src={smithy} type="video/mp4" />
+  <track kind="captions">
+</video>
+<span class="caption">Smithing basic concept</span>
+
+At the moment, this on its own is not fun. I debate if this is just because I haven't spent enough time on the idea and didn't implement it the way I wanted. I'd add an anvil that you'd need to position the weapon on as well as implement heating up the metal to make different parts of it to be more or less receptible to being shaped.
+
+I have a better idea of how this could be implemented but I'm not sure if it's worth pursuing. We'll see if I continue to work on the idea.
+
+That's it! If you enjoyed reading consider subscribing! See ya next time!
+
