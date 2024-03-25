@@ -10,9 +10,7 @@ date: 03-25-2024
   import adding_submodes from './adding_submodes.png';
   import spatial_vs_canvas_waterfall from './spatial_vs_canvas_waterfall.png';
   import fires from './fire_all0.gif';
-  import fire_pc_composition from './fire_composition.png';
   import d_bush from './d_bush.mp4';
-  import forest_trip_final from './forest_trip_final.mp4';
 </script>
 
 Doing work now to make my posts look better going forward would be well worth the effort when promoting my next game.
