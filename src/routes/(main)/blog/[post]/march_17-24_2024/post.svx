@@ -1,0 +1,93 @@
+---
+title: "Dev Log March 17th - 24th"
+author: Robert Allen
+date: 03-25-2024
+---
+
+<script>
+  import bash_before from './bash_before.png';
+  import bash_after from './bash_after.png';
+  import adding_submodes from './adding_submodes.png';
+  import spatial_vs_canvas_waterfall from './spatial_vs_canvas_waterfall.png';
+  import fires from './fire_all0.gif';
+  import fire_pc_composition from './fire_composition.png';
+  import d_bush from './d_bush.mp4';
+  import forest_trip_final from './forest_trip_final.mp4';
+</script>
+
+Doing work now to make my posts look better going forward would be well worth the effort when promoting my next game.
+
+The first thing I focused on was the overall format. 16:9 video doesn't get much screen real estate as posts are constrained by their width, not their height. The format with the most screen real estate on Twitter seemed to be 1:1, so I made some simple updates to the game to make it easy to view in a 1:1 format.
+
+Next was color. They felt a bit dull in general but, especially when posting on the internet, the colors need to pop. I added a `WorldEnvironment` node to the game and played with the post-process effects for brightness, saturation, and contrast. 
+
+<img src={bash_before} alt="Bash Before" />
+<span class="caption">Bash Before</span>
+
+<img src={bash_after} alt="Bash After" />
+<span class="caption">Bash After</span>
+
+## Debug and tuning system
+
+I also felt that these quick fixes were something that would be important for any games I made going forward. So I spent time creating a debug system where I could easily tune all these things in real time while playing the game.
+
+I can press `m` to switch modes. Currently, the two modes are "Camera" and "WorldEnv". Each mode can have sub-modes which I can switch between using `,` and `.`. For instance, the camera has sub-modes:  Zoom, Pan X, Pan Y, and Rotation. The World Env submodes are Brightness, Contrast, and Saturation.
+
+Within each of these sub-modes, I can press `+` or `-` to increase or decrease that value, and if I hold `shift` while pressing either of those it does a large increase/decrease.
+
+<img src={adding_submodes} alt="Adding Subnode's Code Demonstration" />
+<span class="caption">Adding new modes and sub-modes is very easy!</span>
+
+Overall, this seems like the start of a cool system I might use to fine-tune a lot of things in my games. I'm sure I'll add more to this system as time goes on. 
+
+I also played with lighting. Good lighting seems like the cheapest way to make something mediocre look great. Horror games know this and take full advantage. No one can tell your art is bad if they can't see it.
+
+I played around with some shaders this week as well. Created a shockwave pulse effect with chromatic aberration and hooked it up to the dash. I made a short Twitter video showing off all the new lighting and was quite proud of it.
+
+Sadly <a href="the post">the post</a> didn't do better than my other posts. I think this was because the video, despite being only 12 seconds long, was nearly 12 MB even after going through FFmpeg. The lighting effects and confetti really screw with the video encoder. The resulting video loads at like something horrendous at first glance at like 360 - 480p when seen on Twitter which undoes most of my effort to make it look nice.
+
+I do feel all the changes were significant improvements though. Just need to keep an eye on video file size in the future. 
+
+## Smithy game idea 
+
+I worked more on the blacksmith game concept idea but decided to scrap it. The idea was hard to execute and I'm convinced now that even if I pulled it off, that effort to make it would have been better spent on other things. I also saw many other games with a similar concept.  
+
+## Shader distraction
+
+Abandoning the blacksmith game, I'm now in need of a new game idea to prototype. Not immediately finding one I got distracted with shaders (as one does). 
+
+Seeing <a href="https://x.com/cmzw_/status/1770819987520807015?s=20" target="_blank">@celestialmaze's post</a> about creating a pixelated waterfall I decided to download Material Maker and try to recreate the effect to learn the program.
+
+I was successful! However, Material Maker has a bug with exporting to Godot 4's canvas shader. Canvas shaders are the only ones usable in a 2D environment.
+
+<img src={spatial_vs_canvas_waterfall} alt="Side By Side of Spatial Vs Canvas waterfall shader from Material Maker">
+<span class="caption">Spatial Vs Canvas Shader - Material Maker Waterfall</span>
+
+The issue crops up whenever you introduce a node which creates a texture that needs to be passed into the shader. So the Gaussian blur effect present on the waterfall breaks the shader. Removing the effect causes the shader to work correctly but doesn't look as good.
+
+There is a way to use 3D assets in a 2D environment in Godot by rendering the 3D scene to a sub-viewport and then rendering the sub-viewport as a 2D sprite. But that feels too hacky for my taste.
+
+I looked into fixing the bug but it's a bit beyond me. I at least made the awesome Material Maker dev aware of the issue.
+
+## Pixel Composer
+
+<img src={fires} alt="Procedural fires made in Pixel Composer">
+<span class="caption">Procedural fires made in Pixel Composer</span>
+
+Distracting myself more, I looked into a similar program called <a href="https://makham.itch.io/pixel-composer" target="_blank">Pixel Composer</a>.  Super cool program for creating sprites, effects, and manipulating pixel art in a powerful node-based system. The Pixel Composer dev is super dedicated and has produced a lot of resources to learn his program. They also live-stream their development off Pixel Composer <a target="_blank" href="https://www.youtube.com/@makhamdev">on youtube</a> so check them out if you're interested.
+
+Made these procedurally generated fires and bushes with the program, without drawing a single pixel. Not the tool for everything but it seems like a powerful one to have in the tool belt.
+
+<video controls loop>
+  <source src={d_bush} type="video/mp4" />
+  <track kind="captions">
+</video>
+<span class="caption">Procedural bush growth effect</span>
+
+
+## Wrap up
+
+That's it for this week. I'm looking for a new game idea to prototype. I think I've been too picky about ideas, so I'm going to pick one and start building something.
+
+See ya next time!
+

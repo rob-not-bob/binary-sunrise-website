@@ -18,4 +18,12 @@ export const posts = [
     heroImageUrl: import('./smithy/cover.png'),
     description: "Hello again! I forgot to mention this in the last post. I do all my game development in Godot. All programming content will be catered towards that."
   },
+  {
+    href: '/blog/march_17-24_2024',
+    title: 'Dev Log March 17th - 24th: Visual Improvements',
+    author: 'Robert Allen',
+    date: '03-25-2024',
+    heroImageUrl: import('./march_17-24_2024/bash_after.png'),
+    description: "This week, I made a lot of visual presentation improvements. I felt that my images for Bash weren't that visually compelling. The colors felt flat. The large images made it hard to see the character when viewed on Twitter vs on a big full-screen display. "
+  },
 ];
