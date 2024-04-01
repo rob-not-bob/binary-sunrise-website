@@ -16,7 +16,7 @@
 <div class="container">
   <!-- <SocialMediaButtons url={$page.url.href} title={data.title} /> -->
   <div class="row justify-content-center">
-    <article class="col-lg-7">
+    <article class="col-lg-9">
       <div class="postMeta">
         <span class="postAuthor">{data.author}</span>
         <span class="postDate">{data.date}</span>

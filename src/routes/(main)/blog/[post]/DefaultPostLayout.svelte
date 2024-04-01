@@ -49,7 +49,7 @@
     --color-canvas-default: #ffffff;
     --color-canvas-subtle: #f6f8fa;
     --color-border-default: #d0d7de;
-    --color-border-blockquote: #00ab6d;
+    --color-border-blockquote: #3d1252;
     --color-border-muted: hsla(210, 18%, 87%, 1);
     --color-neutral-muted: rgba(175, 184, 193, 0.2);
     --color-accent-fg: #990f6b;

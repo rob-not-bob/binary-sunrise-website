@@ -1,0 +1,84 @@
+---
+title: "Dev Log March 25th - April 1st"
+author: Robert Allen
+date: 04-01-2024
+---
+
+<script>
+import ant_game from './ant_game.png';
+  import ant_game_death_spiral from './ant_game_death_spiral.png';
+  import death_spiral from './real_ant_death_spiral.webp';
+</script>
+
+This week's dev log is pretty light. I spent most of the time researching game genres after coming across Chris Z's <a target="_blank" href="https://howtomarketagame.com">howtomarketagame</a> website.
+
+It was pretty crazy to me how much disparity there was between game genres and did get me rethinking a lot of what I was trying to make. I had decent ideas for a platformer for instance but after seeing that platformers make almost no money unless you do extremely extremely well. It made me rethink some things.
+
+<a href="https://howtomarketagame.com/2020/10/19/steamgenres/" target="_blank">
+<img src="https://howtomarketagame.com/wp-content/uploads/2020/10/30-50-and-70-earnings-per-genre.png" alt="Earning's per game genre">
+</a>
+<span class="caption">Earning for games in various genres</span>
+
+Fundamentally, as an indie developer trying to do this career full-time, I need to try and make money from it first. That means making games that people want to play and that they'll pay me for.
+
+This left me a bit confused as to how to approach finding my next game idea. I decided to start with an easier choice and simply try and pick what genre I wanted to make.
+
+I made a simple spreadsheet of some of the genres that sold well and interested me according to <a target="_blank" href="https://games-stats.com/">games-stats.com</a>.
+
+I then rated each of those by a few key attributes. When it came down to it I was left with three genres to choose from to make my next game in.
+
+|Genre               |Median Income|# Games In Genre|Own Passion (1-10)|Ability (1-10)|Scope to Achieve Median Game (1-10)|
+|--------------------|-------------|----------------|------------------|--------------|------------|
+|<a href="https://games-stats.com/steam/?tag=roguelike-deckbuilder" target="_blank">Rouge-like DeckBuilder</a>|$28,000.00   |190             |6                 |8             |4           |
+|<a href="https://games-stats.com/steam/?tag=economy&tag=management&tag-exclude=4x&tag-exclude=automobile-sim&tag-exclude=base-building&tag-exclude=city-builder&release-to=March+26,+2024&early_access=exclude&price_from=0.01&stats=on" target="_blank">Economy / Management</a>|$10,000.00   |419             |5                 |5             |7           |
+|<a href="https://games-stats.com/steam/?tag=automation&tag=programming&release-to=March+26,+2024&early_access=exclude&price_from=0.01&stats=on&page=1" target="_blank">Programming</a>         |$8,300.00    |478             |8                 |7             |4           |
+<span class="caption">Profitable genre's I feel I could contribute too</span>
+
+
+I then tried to come up with games in those genres but wasn't coming up with any ideas that inspired me. I bought some games in those genres and spent some time playing them to see if that might help generate some ideas. It did somewhat but still didn't find anything I liked.
+
+For some of my last few tiny games, I came up with the ideas using game jam themes. So I decided to compile a small list of game jam themes by going through the GMTK game jam videos. The previous GMTK game jam themes were:
+
+- Roles Reversed
+- Roll of the die
+- Dual-purpose design (i.e. shooting and jumping are the same in Downwell)
+- Make a game in a genre, but missing a critical aspect of that genre (platformer w/o jumping)
+- Only one (only one bullet, only one room, only one button, etc.)
+- Out of control
+- Joined together
+
+Then with this list and the genre, I found it much easier to start generating ideas.
+
+Restricting the amount of possible solutions makes it a lot easier to be creative. It's hard to name 100 people, it's easy to name 20 friends, 20 family members, 20 sports players, 20 celebrities, and 20 politicians.
+
+I came across another <a target="_blank" href="https://www.youtube.com/watch?v=4DWdnoLosZ8&t=2434s">great GDC talk about embracing ambiguity</a>. There was a great quote in it that seemed relevant to my situation.
+
+> All decisions are easy.
+>
+> If it's an easy decision you just make it.
+> 
+> If it's a hard decision, it's hard because both options are about equally good so you just pick one.
+
+This quote quite resonated with me. While I've certainly learned a lot about what genres make money and done a lot of research on how to make my project a success, I haven't spent enough time just making games lately. 
+
+So I just need to pick something. It's only supposed to be a short-term project anyway so if it fails then that's okay, I will likely have learned a lot from the experience.
+
+## Ant Programming Game Prototype
+
+<img src={ant_game} alt="Ant Prototype" />
+<span class="caption">Ant Prototype</span>
+
+I've started work on a new project which shows a lot of promise. Essentially it's a programming game but you're programming a swarm of ants. I think this will be a bit of a remix on other programming games because most of those see you programming either machines or a single unit. Whereas in this the program will have to work when applied to the whole colony at once.
+
+It's almost a bit reminiscent of shader programming where you can't think of any individual pixel but must instead think about writing your program so it works when run in parallel for every pixel on the screen.
+
+I'm starting by recreating the ant simulation seen in <a href="https://www.youtube.com/watch?v=X-iSQQgOd1A" target="_blank">Sebastian Lague's excellent coding adventure video about Ants and Slime</a>. After getting that implemented on a basic level I can start prototyping and creating custom behavior.
+
+<div class="row">
+  <img class="col-md-6" src={ant_game_death_spiral} alt="Prototype game Ant death spiral">
+  <img class="col-md-6" src={death_spiral} alt="Real-Life Ant death spiral">
+</div>
+<span class="caption">Well I've recreated the ant death spiral successfully so that means I'm on the right track?</span>
+
+That's it for this week! Not a lot to show visually but hopefully this ant game idea will continue to show promise!
+
