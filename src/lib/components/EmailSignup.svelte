@@ -1,63 +1,71 @@
-<!-- From mailchimps signup -->
-<div id="mc_embed_shell">
-  <div id="mc_embed_signup">
-    <form
-      action="https://dev.us12.list-manage.com/subscribe/post?u=4450f495d66ba7cce709f3da5&amp;id=777a95777c&amp;f_id=00464be0f0"
-      method="post"
-      id="mc-embedded-subscribe-form"
-      name="mc-embedded-subscribe-form"
-      class="validate"
-      target="_self"
-      novalidate
-    >
-      <div id="mc_embed_signup_scroll" class="container">
-        <h2>Subscribe for updates</h2>
-        <div class="mc-field-group row">
-          <div class="col-md-8">
-            <input
-              type="email"
-              name="EMAIL"
-              class="required email"
-              id="mce-EMAIL"
-              placeholder="Enter your email"
-              required
-              value=""
-            /><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-          </div>
-          <div class="optionalParent col-md-4">
-            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe" />
+<!-- From Mailer Lite's Embed Sign Up -->
+<script lang="ts">
+  var loading = false;
+  var show_success = false;
 
-            <p style="margin: 0px auto;">
-              <a href="http://eepurl.com/iFw89M" title="Mailchimp - email marketing made easy and fun">
-                <span style="display: inline-block; background-color: transparent; border-radius: 4px;">
-                  <img
-                    class="refferal_badge"
-                    src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-                    alt="Intuit Mailchimp"
-                    style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"
-                  />
-                </span>
-              </a>
-            </p>
-          </div>
-        </div>
-        <div id="mce-responses">
-          <div class="response" id="mce-error-response" style="display: none;" />
-          <div class="response" id="mce-success-response" style="display: none;" />
-        </div>
+  async function handleSubmit(e: SubmitEvent) {
+    loading = true;
+    const formData = new FormData(e.target as HTMLFormElement)
 
-        <div aria-hidden="true" style="position: absolute; left: -5000px;">
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+    try {
+      const response = await fetch("https://assets.mailerlite.com/jsonp/1001877/forms/125205569294304763/subscribe", {
+        method: "POST",
+        body: formData,
+      });
 
-          <input type="text" name="b_4450f495d66ba7cce709f3da5_777a95777c" tabindex="-1" value="" />
+      var result = await response.json();
+      console.info('subscription response', result);
+      if (result.success) {
+        show_success = true;
+      }
+
+    } catch (e) {
+      console.error(e);
+    }
+
+    loading = false;
+  }
+
+  fetch("https://assets.mailerlite.com/jsonp/1001877/forms/125205569294304763/takel")
+</script>
+<div id="mlb2-15939842" class="ml-form-embedContainer">
+  <div class="container">
+    {#if !show_success}
+      <div class="row">
+        <div class="col-md-12">
+        <h2>Save your spot in the upcoming beta!</h2>
+          <p>I'm still working on my game but when I'm ready to invite playtesters you'll be the first to hear! I'll also send out an update roughly once a month about recent development.</p>
+          <p>If that sounds interesting, submit your email below!</p>
         </div>
       </div>
-    </form>
+      <form on:submit|preventDefault={handleSubmit} data-code="">
+        <div class="row">
+          <div class="col-md-8">
+            <input type="email" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email" required>
+          </div>
+          <div class="col-md-4">
+            {#if loading}
+              <button disabled type="button" class="loading">
+                <div class="ml-form-embedSubmitLoad"></div>
+                <span class="sr-only">Loading...</span>
+              </button>
+            {:else}
+              <button type="submit" class="primary">Sign Up</button>
+            {/if}
+          </div>
+        </div>
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
+      </form>
+    {:else}
+      <h2>Thank you!</h2>
+      <p class="confirmation-message">We've sent you an email to confirm your beta sign up :)</p>
+    {/if}
   </div>
 </div>
 
 <style lang="scss">
-  #mc_embed_shell {
+  .ml-form-embedContainer {
     background-color: #ebe8ed;
     padding: 48px 12px;
   }
@@ -66,6 +74,10 @@
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 8px;
+  }
+
+  form {
+    margin-top: 20px;
   }
 
   input[type='email'] {
@@ -85,7 +97,7 @@
     }
   }
 
-  #mc-embedded-subscribe {
+  button {
     width: 100%;
     height: 50px;
     color: white;
@@ -100,6 +112,17 @@
     transition: all 0.25s;
     cursor: pointer;
 
+    &[disabled] {
+      background-color: #a8a8a8;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: #a8a8a8;
+        color: white;
+        box-shadow: none;
+      }
+    }
+
     &:hover {
       background-color: white;
       color: var(--accent);
@@ -112,8 +135,9 @@
     }
   }
 
-  .optionalParent p {
-    position: absolute;
-    left: -9999px;
+  .container p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 4px;
   }
 </style>
