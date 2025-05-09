@@ -1,11 +1,12 @@
 <script lang="ts">
   import type { SvelteComponent } from 'svelte';
-  import { Button, Facebook, Instagram, Twitter, Steam, Itch, TikTok, YouTube } from './Icons';
+  import { Button, Facebook, Instagram, Twitter, BlueSky, Steam, Itch, TikTok, YouTube } from './Icons';
 
   const socialMedia: [string, writeable<typeof SvelteComponent>][] = [
     // ['/', Facebook],
     // ['/', Instagram],
-    ['https://twitter.com/BinarySunrise_', Twitter],
+    ['https://x.com/BinarySunrise_', Twitter],
+    ['https://bsky.app/profile/binarysunrise.bsky.social', BlueSky],
     // ['/', Steam],
     ['https://binarysunrise.itch.io/', Itch],
     ['https://www.tiktok.com/@binary_sunrise', TikTok],
